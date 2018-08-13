@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Odelia's Semantic Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+
+        #container {
+            position: absolute;
+            top: 65%;
+            left: 10%;
+            right: 10%;
+        }
+
+        /* Hide the images by default */
+
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 15px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Container for image text */
+
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        .profilepic {
+            width: 50%;
+            float: left;
+            padding: 20px;
+            align-content: center
+        }
+        .proftitle {
+            text-align: center;
+        }
+
+        .bio {
+            width: 50%;
+            float: right;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containerProfile">
+        <h1 class="proftitle">Profile</h1>
+        <div class="profilepic">
+            <img src="./photolib/odie-profile-pic.jpg" style="width:80%" alt="profilepic">
+        </div>
+        <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur asperiores sit ad dolorum deleniti, mollitia magni,
+            voluptas numquam praesentium, enim similique corporis et rerum delectus minima tempora in aspernatur nam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Assumenda repudiandae at perspiciatis, molestiae est accusamus fugiat alias natus! Architecto minima iste modi illo id adipisci dicta rem neque voluptate culpa?
+        </div>
+    </div>
+
+    <div id="container">
+            <h2 style="text-align:center">My Travel Pics</h2>
+        <div class="mySlides">
+            <img src="./photolib/amsterdam.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="amsterdam">
+        </div>
+
+        <div class="mySlides">
+            <img src="./photolib/bali-beach.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="bali-beach">
+        </div>
+
+        <div class="mySlides">
+            <img src="./photolib/church-russia.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="church-russia">
+        </div>
+
+        <div class="mySlides">
+            <img src="./photolib/joshua-tree.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="joshua-tree">
+        </div>
+
+        <div class="mySlides">
+            <img src="./photolib/kawah-putih.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="kawah-putih">
+        </div>
+
+        <div class="mySlides">
+            <img src="./photolib/lawang-sewu.jpg" style="width:100%; height:100%; padding-left:70px; padding-right:70px;" alt="lawang-sewu">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="./photolib/amsterdam.jpg" style="width:100%" onclick="currentSlide(1)" alt="amsterdam">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./photolib/bali-beach.jpg" style="width:100%" onclick="currentSlide(2)" alt="bali-beach">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./photolib/church-russia.jpg" style="width:100%" onclick="currentSlide(3)" alt="church-russia">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./photolib/joshua-tree.jpg" style="width:100%" onclick="currentSlide(4)" alt="joshua-tree">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./photolib/kawah-putih.jpg" style="width:100%" onclick="currentSlide(5)" alt="kawah-putih">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./photolib/lawang-sewu.jpg" style="width:100%" onclick="currentSlide(6)" alt="lawang-sewu">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
